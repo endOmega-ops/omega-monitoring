@@ -14,7 +14,7 @@ services:
     ports:
       - "3000:3000"
     volumes:
-      - grafana-data:/var/lib/grafana # <-- Speichert Einstellungen dauerhaft auf dem Host
+      - grafana-data:/var/lib/grafana # <-- Speichert Einstellungen dauerhaft - merken
       
 
   node-exporter:
@@ -29,7 +29,6 @@ services:
       - '--path.sysfs=/host/sys'
       - '--path.rootfs=/rootfs'
 
-# Hier definieren wir den dauerhaften Speicherort
 volumes:
   grafana-data:
   prometheus-data:
